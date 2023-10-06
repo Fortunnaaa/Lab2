@@ -1,29 +1,24 @@
 # Функція для обчислення z згідно з умовами
-def calculate_z(x, y):
+def main(x,y):
     if x > 8:
         z = 3 + y
     else:
         z = 9 * x * y
     return z
 
-# Функція для обчислення факторіала
-def calculate_factorial(n):
-    factorial = 1
-    for i in range(1, n + 1):
-        factorial *= i
-    return factorial
-
 # Отримуємо від користувача значення x та y для першої функції
 x = float(input("Введіть значення x: "))
 y = float(input("Введіть значення y: "))
 
 # Викликаємо першу функцію та виводимо результат
-result1 = calculate_z(x, y)
-print(f"Результат першої функції: {result1}")
+result1 = main(x, y)
+print("Результат першої функції: ", result1)
 
-# Отримуємо від користувача значення n для другої функції
+# Отримуємо від користувача значення n для обчислення факторіала
 n = int(input("Введіть значення n для обчислення факторіала: "))
 
-# Викликаємо другу функцію та виводимо результат
+# Викликаємо другу функцію з модуля та виводимо результат
+from factorial import calculate_factorial
 result2 = calculate_factorial(n)
 print(f"Факторіал {n}!: {result2}")
+
